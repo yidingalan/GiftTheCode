@@ -132,11 +132,16 @@ function submit(){
 	newInput5.type = 'hidden';
 	newInput5.name = 'Question5';
 	newInput5.value = Q5;
+	newInput6 = document.createElement('input');
+	newInput6.type = 'hidden';
+	newInput6.name = 'Question5';
+	newInput6.value = datestring;
 	theForm.appendChild(newInput1);
 	theForm.appendChild(newInput2);
 	theForm.appendChild(newInput3);
 	theForm.appendChild(newInput4);
 	theForm.appendChild(newInput5);
+	theForm.appendChild(newInput6);
 	 
 	document.getElementById('form_container').appendChild(theForm);
 	theForm.submit();
