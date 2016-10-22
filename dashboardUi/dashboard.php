@@ -61,7 +61,7 @@
 			<li><a href="icons.html"><svg class="glyph stroked star"><use xlink:href="#stroked-star"></use></svg> Icons</a></li>
 			<li class="parent ">
 				<a href="#">
-					<span data-toggle="collapse" href="#sub-item-1"><svg class="glyph stroked chevron-down"><use xlink:href="#stroked-chevron-down"></use></svg></span> Dropdown 
+					<span data-toggle="collapse" href="#sub-item-1"><svg class="glyph stroked chevron-down"><use xlink:href="#stroked-chevron-down"></use></svg></span> Dropdown
 				</a>
 				<ul class="children collapse" id="sub-item-1">
 					<li>
@@ -87,7 +87,7 @@
 
 	</div><!--/.sidebar-->
 
-	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">			
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
 		<div class="row">
 			<ol class="breadcrumb">
 				<li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
@@ -157,7 +157,7 @@
 			</div>
 		</div>
 	</div> --><!--/.row-->
-	
+
 	<div class="row">
 		<div class="col-xs-6 col-md-3">
 			<div class="panel panel-default">
@@ -167,24 +167,28 @@
 					</div>
 				</div>
 			</div>
-		</div>		
+		</div>
 
 		<div class="col-md-9">
 			<div class="panel panel-blue">
 				<div class="panel-heading dark-overlay" onclick="location.href='tables.html';" style="cursor: pointer;"><svg class="glyph stroked gear"><use xlink:href="#stroked-gear"/></use></svg>Brain Education</div>
 				<div class="panel-body">
 					<ul class="todo-list">
-						<li class="todo-list-item">
+					<?php
+                    for ($i=0;$i<10;$i++) {
+                        echo '<li class="todo-list-item">
 							<div class="col-xs-4">
 								<div class="pull-left">dateCompleted</div>
 							</div>
 							<div class="col-xs-4">
-								<div>quiz1</div>
+								<div>quiz' . $i . '</div>
 							</div>
 							<div class="col-xs-4">
 								<div class="pull-right">Score: X/10</div>
 							</div>
-						</li>
+						</li>';
+                        }
+                    ?>
 					</ul>
 				</div>
 			</div>
@@ -200,7 +204,7 @@
 					</div>
 				</div>
 			</div>
-		</div>	
+		</div>
 
 		<div class="col-md-9">
 			<div class="panel panel-orange">
@@ -470,7 +474,7 @@
 									<strong class="primary-font">John Doe</strong> <small class="text-muted">32 mins ago</small>
 								</div>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ante turpis, rutrum ut ullamcorper sed, dapibus ac nunc. Vivamus luctus convallis mauris, eu gravida tortor aliquam ultricies. 
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ante turpis, rutrum ut ullamcorper sed, dapibus ac nunc. Vivamus luctus convallis mauris, eu gravida tortor aliquam ultricies.
 								</p>
 							</div>
 						</li>
@@ -496,7 +500,7 @@
 									<strong class="primary-font">John Doe</strong> <small class="text-muted">32 mins ago</small>
 								</div>
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ante turpis, rutrum ut ullamcorper sed, dapibus ac nunc. Vivamus luctus convallis mauris, eu gravida tortor aliquam ultricies. 
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ante turpis, rutrum ut ullamcorper sed, dapibus ac nunc. Vivamus luctus convallis mauris, eu gravida tortor aliquam ultricies.
 								</p>
 							</div>
 						</li>
@@ -615,9 +619,9 @@
 	});
 
 	!function ($) {
-		$(document).on("click","ul.nav li.parent > a > span.icon", function(){          
-			$(this).find('em:first').toggleClass("glyphicon-minus");      
-		}); 
+		$(document).on("click","ul.nav li.parent > a > span.icon", function(){
+			$(this).find('em:first').toggleClass("glyphicon-minus");
+		});
 		$(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
 	}(window.jQuery);
 
@@ -627,7 +631,7 @@
 	$(window).on('resize', function () {
 		if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
 	})
-</script>	
+</script>
 </body>
 
 </html>

@@ -1,5 +1,12 @@
 <?php
-//Used to process the POST request and store the quiz scores in DB
+//testing post recieve
+print_r($_POST);
+exit();
+
+
+/*
+ INSERTING QUIZ RESULTS INTO DB
+*/
 
 //connect with bloorview db
 $link = mysqli_connect("localhost", "root", "", "bloorview");
