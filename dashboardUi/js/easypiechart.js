@@ -354,8 +354,7 @@ $.fn.easyPieChart = function(options) {
 			instanceOptions = $.extend({}, options, $(this).data());
 			pieChart = new EasyPieChart(this, instanceOptions);	
 			$.data(this, 'easyPieChart', pieChart);
-			httpUpdatePercentage(url, handleData, instanceOptions.percent, pieChart);
-			// httpUpdatePercentage(url, handleData, instanceOptions.percent); // call the action, setting the callback
+			// httpUpdatePercentage(url, handleData, instanceOptions.percent, pieChart);
 		}
 	});
 };

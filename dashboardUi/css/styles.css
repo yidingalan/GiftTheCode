@@ -7,7 +7,7 @@ Version 1.0
 /*Global Styles*/
 
 body {
-	background: #f1f4f7;
+	background: #F5F5F5;
 	padding-top: 50px;
 	color: #5f6468;
 }
@@ -47,10 +47,10 @@ h3, h4 {
 }
 
 .color-gray { color: #5f6468; }
-.color-blue { color: #30a5ff; }
-.color-teal { color: #1ebfae; }
-.color-orange { color: #ffb53e; }
-.color-red { color: #f9243f; }
+.color-blue { color: #03A9F4; }
+.color-teal { color: #26C6DA; }
+.color-orange { color: #FFA726; }
+.color-red { color: #EF5350; }
 
 .bg-primary .glyphicon-remove { color: #5f6468;}
 .bg-primary .glyphicon-remove:hover { color: #ef4040;}
@@ -343,10 +343,10 @@ a.bg-danger:hover {
 	text-decoration: none;
 }
 
-.panel-blue { background: #30a5ff; color: #fff; }
-.panel-teal { background: #1ebfae; color: #fff; }
-.panel-orange { background: #ffb53e; color: #fff; }
-.panel-red { background: #f9243f; color: #fff; }
+.panel-blue { background: #03A9F4; color: #fff; }
+.panel-teal { background: #26C6DA; color: #fff; }
+.panel-orange { background: #FFA726; color: #fff; }
+.panel-red { background: #EF5350; color: #fff; }
 .panel-green { background: #00E676; color: #fff; }
 
 .panel-blue .panel-body p,
@@ -428,10 +428,10 @@ a.bg-danger:hover {
 	color: #5f6468;
 }
 
-.panel-blue .widget-left { background: #30a5ff; color: #fff; }
-.panel-teal .widget-left { background: #1ebfae; color: #fff; }
-.panel-orange .widget-left { background: #ffb53e; color: #fff; }
-.panel-red .widget-left { background: #f9243f; color: #fff; }
+.panel-blue .widget-left { background: #42A5F5; color: #fff; }
+.panel-teal .widget-left { background: #26C6DA; color: #fff; }
+.panel-orange .widget-left { background: #FFA726; color: #fff; }
+.panel-red .widget-left { background: #EF5350; color: #fff; }
 
 .panel-widget {
 	background: #fff;
@@ -647,7 +647,7 @@ h1.page-header {
 /*Charts*/
 
 .main-chart {
-	background: #fff;
+	background: #EEEEEE;
 }
 
 .easypiechart-panel {
@@ -680,10 +680,10 @@ h1.page-header {
 	width: 120px;
 }
 
-#easypiechart-blue .percent { color: #30a5ff;}
-#easypiechart-teal .percent { color: #1ebfae;}
-#easypiechart-orange .percent { color: #ffb53e;}
-#easypiechart-red .percent { color: #ef4040;}
+#easypiechart-blue .percent { color: #03A9F4;}
+#easypiechart-teal .percent { color: #26C6DA;}
+#easypiechart-orange .percent { color: #FFA726;}
+#easypiechart-red .percent { color: #EF5350;}
 #easypiechart-green .percent { color: #00E676;}
 
 /*Calendar Widget*/
