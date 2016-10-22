@@ -17,13 +17,22 @@
 
     <body>
 <form action="upload.php" method="post" enctype="multipart/form-data">
-    Select image to upload:
+	<div >
+	<div id="submit_button">
+    <input type="submit" value="Upload Quiz" name="submit">
+	</div>
+	<div id="dropdown">
     <input type="file" name="fileToUpload" id="fileToUpload">
-    <input type="submit" value="Upload Image" name="submit">
+	</div>
+	</div>
 </form>
+<style type="text/css">
+#submit_button {float:right;}
+#dropdown {float:right;}
+</style>
+
         <!-- Top content -->
         <div class="top-content" id="form_container">
-            
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2 text">
@@ -34,22 +43,19 @@
 					<div class="row">
                         <div class="col-sm-6 col-sm-offset-3 form-box">
                         	<div class="form-top">
-                        		<div id="move" class="form-top-left">
 									<div id="first_question">
 										<p class="form_group"> Which of the following is an acquired brain injury (ABI)?
 												(In future need to add php or javascript to pull from data in server) </p>
 										<button id="Q1_A" type="submit" onclick="Q1('Q1_A');" class="btn">Stroke</button>
 										<button id="Q1_B" type="submit" onclick="Q1('Q1_B');" class="btn">Broken Leg</button>
-										<button id="Q1_C" type="submit" onclick="Q1('Q1_C');" class="btn">Chicken Pox</button>
+										<button id="Q1_C" type="submit" onclick="Q1('Q1_C');" class="btn">Chickefdsfsdfasdfsdafdsafsdafdsafdsfn Pox</button>
 										<button id="Q1_D" type="submit" onclick="Q1('Q1_D');" class="btn">All of the above</button>
 									</div>	
-								</div>
 							</div>
 						</div>
 						
 						<div class="col-sm-6 col-sm-offset-3 form-box">
                         	<div class="form-top">
-                        		<div id="move" class="form-top-left">			
 									<div id="second_question">
 										<p class="form_group"> Sample question 2 (In future need to add php or javascript to pull from data in server) </p>
 										<button id="Q2_A" type="submit" onclick="Q2('Q2_A');" class="btn">Sign in!</button>
@@ -57,12 +63,10 @@
 										<button id="Q2_C" type="submit" onclick="Q2('Q2_C');" class="btn">Sign in!</button>
 										<button id="Q2_D" type="submit" onclick="Q2('Q2_D');" class="btn">Sign in!</button>
 									</div>	
-								</div>
 							</div>
 						</div>						
 						<div class="col-sm-6 col-sm-offset-3 form-box">
                         	<div class="form-top">
-                        		<div id="move" class="form-top-left">
 									<div id="third_question">
 										<p class="form_group"> Sample question 3 (In future need to add php or javascript to pull from data in server) </p>
 										<button id="Q3_A" type="submit" onclick="Q3('Q3_A');" class="btn">Sign in!</button>
@@ -70,12 +74,10 @@
 										<button id="Q3_C" type="submit" onclick="Q3('Q3_C');" class="btn">Sign in!</button>
 										<button id="Q3_D" type="submit" onclick="Q3('Q3_D');" class="btn">Sign in!</button>
 									</div>
-								</div>
 							</div>
 						</div>	
 						<div class="col-sm-6 col-sm-offset-3 form-box">
                         	<div class="form-top">
-                        		<div id="move" class="form-top-left">
 									<div id="four_question">
 										<p class="form_group"> Sample question 4 (In future need to add php or javascript to pull from data in server) </p>
 										<button id="Q4_A" type="submit" onclick="Q4('Q4_A');" class="btn">Sign in!</button>
@@ -83,12 +85,10 @@
 										<button id="Q4_C" type="submit" onclick="Q4('Q4_C');" class="btn">Sign in!</button>
 										<button id="Q4_D" type="submit" onclick="Q4('Q4_D');" class="btn">Sign in!</button>
 									</div>
-								</div>
 							</div>
 						</div>	
 						<div class="col-sm-6 col-sm-offset-3 form-box">
                         	<div class="form-top">
-                        		<div id="move" class="form-top-left">
 									<div id="fifth_question">
 										<p class="form_group"> Sample question 5 (In future need to add php or javascript to pull from data in server) </p>
 										<button id="Q5_A" type="submit" onclick="Q5('Q5_A');" class="btn">Sign in!</button>
@@ -96,7 +96,6 @@
 										<button id="Q5_C" type="submit" onclick="Q5('Q5_C');" class="btn">Sign in!</button>
 										<button id="Q5_D" type="submit" onclick="Q5('Q5_D');" class="btn">Sign in!</button>
 									</div>									
-								</div>
 							</div>
 						</div>
 				</div>
