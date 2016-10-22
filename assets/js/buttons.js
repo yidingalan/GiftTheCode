@@ -134,7 +134,7 @@ function submit(){
 	newInput5.value = Q5;
 	newInput6 = document.createElement('input');
 	newInput6.type = 'hidden';
-	newInput6.name = 'Question5';
+	newInput6.name = 'datestring';
 	newInput6.value = datestring;
 	theForm.appendChild(newInput1);
 	theForm.appendChild(newInput2);
