@@ -7,7 +7,7 @@ var main = function() {
 
 $('.btn-2').click(function() {
     $('.sign-up-form').hide(1000);
-    $('.login-form').fadeIn(3000);
+    $('.login-form').delay(2000).fadeIn(3000);
   });
 
 };
