@@ -21,17 +21,14 @@
     <input type="file" name="fileToUpload" id="fileToUpload">
     <input type="submit" value="Upload Image" name="submit">
 </form>
-	<?php
-echo "My first PHP script!";
-?> 
         <!-- Top content -->
-        <div class="top-content">
+        <div class="top-content" id="form_container">
             
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2 text">
                             <h1><strong>BrainQuiz!</strong> <br/></h1>
-							<h2 style="color:white"><?php echo 'Module 1: ABI'; ></h2>
+							<h2 style="color:white">Module 1</h2>
                         </div>
                     </div>
 					<div class="row">
@@ -106,22 +103,14 @@ echo "My first PHP script!";
             </div>
         
 	</div>	
-					<div class="row">
-						<div class="col-sm-6 col-sm-offset-3 form-box">
-							
-							<button id="UUU" style="width:75%" onclick="submit();" class="btn_sign_up" background ="#eee">Submit!</button>
-							<script>
-							$("#UUU").click(function(){
-							alert("HELLO");
-							}); 
-							</script>
-						</div>
-					</div>
-					<br/>
-					<br/>
-					
-					
-
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-3 form-box">
+					<button style="width:75%" onclick="submit();" class="btn_sign_up" background ="#eee">Submit!</button>
+				</div>
+			</div>
+			
+			<br/>
+			<br/>			
 
         <!-- Javascript -->
         <script src="assets/js/jquery-1.11.1.min.js"></script>

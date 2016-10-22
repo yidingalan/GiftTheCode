@@ -105,6 +105,37 @@ function submit(){
 		Q5 = 4;
 	}
 //store date, score, quiz, module, id 
+	theForm = document.createElement('form');
+	theForm.action = 'quizResultsHandler.php';
+	theForm.method = 'post';
+	newInput1 = document.createElement('input');
+	newInput1.type = 'hidden';
+	newInput1.name = 'Question1';
+	newInput1.value = Q1;
+    newInput2 = document.createElement('input');
+	newInput2.type = 'hidden';
+	newInput2.name = 'Question2';
+	newInput2.value = Q2;
+    newInput3 = document.createElement('input');
+	newInput3.type = 'hidden';
+	newInput3.name = 'Question3';
+	newInput3.value = Q3;
+    newInput4 = document.createElement('input');
+	newInput4.type = 'hidden';
+	newInput4.name = 'Question4';
+	newInput4.value = Q4;
+    newInput5 = document.createElement('input');
+	newInput5.type = 'hidden';
+	newInput5.name = 'Question5';
+	newInput5.value = 'Q5';
+	theForm.appendChild(newInput1);
+	theForm.appendChild(newInput2);
+	theForm.appendChild(newInput3);
+	theForm.appendChild(newInput4);
+	theForm.appendChild(newInput5);
+	 
+	document.getElementById('form_container').appendChild(theForm);
+	theForm.submit();
 	
 	}
 
