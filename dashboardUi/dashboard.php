@@ -1,3 +1,17 @@
+<?php
+
+/*
+
+Render brain course dashboard
+
+hardcode: module, quizname, score, `date`, modulePercent
+
+*/
+
+$module = "Brain Education"; $quizname = "Sample Quiz A"; $score = "4/5"; $date = "2016-10-31"; $modulePercent = "77";
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -163,7 +177,7 @@
 			<div class="panel panel-default">
 				<div class="panel-body easypiechart-panel">
 					<h4>Brain Education</h4>
-					<div class="easypiechart" id="easypiechart-blue" data-percent="0" ><span class="percent">28%</span>
+					<div class="easypiechart" id="easypiechart-blue" data-percent="0" ><span class="percent"><? $modulePercent."%" ?></span>
 					</div>
 				</div>
 			</div>
@@ -178,13 +192,13 @@
                     for ($i=0;$i<10;$i++) {
                         echo '<li class="todo-list-item">
 							<div class="col-xs-4">
-								<div class="pull-left">dateCompleted</div>
+								<div class="pull-left">'.$date.'</div>
 							</div>
 							<div class="col-xs-4">
-								<div>quiz' . $i . '</div>
+								<div>'.$quizname.'</div>
 							</div>
 							<div class="col-xs-4">
-								<div class="pull-right">Score: X/10</div>
+								<div class="pull-right">Score: '.$score.'</div>
 							</div>
 						</li>';
                         }
