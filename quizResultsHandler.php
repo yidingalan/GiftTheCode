@@ -1,13 +1,10 @@
 <?php
 //testing post recieve
 print_r($_POST);
-exit();
-
 
 /*
  INSERTING QUIZ RESULTS INTO DB
 */
-
 //read the JSON file
 $file = "quizQuestion.json";
 $json = json_decode(file_get_contents($file), true);
@@ -36,7 +33,7 @@ foreach ($json as $key => $value){
 echo $score;
 
 //connect with bloorview db
-$link = mysqli_connect("localhost", "root", "", "bloorview");
+$link = mysqli_connect("localhost", "root", "Singard,.", "bloorview");
 //error handling
 if (!$link){
   echo "Error: Unable to connect to mySQL".PHP_EQL;
@@ -48,13 +45,13 @@ if (!$link){
 //if it succeeds  --delete it later
 echo "<br>Success<br>";
 
-//create an hardcoded associative array
-$quizstatus = array("module"=>"2","quizname"=>"math1","score"=>"2/5","date"=>"2016-10-22");
+//create an hardcoded associative array - will be dynamically updated later
+$quizstatus = array("module"=>"2","quizname"=>"math1","date"=>"2016-10-22");
 
 //Parse the data
 $module = $quizstatus["module"];
 $quizname = $quizstatus["quizname"];
-$score = $quizstatus["score"];
+//$score = $quizstatus["score"];
 $date = $quizstatus["date"];
 
 //$date1 = date('Y-m-d', strtotime(str_replace('-', '/', $date)));
@@ -68,5 +65,4 @@ if ($link->query($sql) === TRUE) {
 } else {
     echo "Error: " . $sql . "<br>" . $link->error;
 }
-
 ?>
