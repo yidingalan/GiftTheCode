@@ -33,7 +33,7 @@ foreach ($json as $key => $value){
 echo $score;
 
 //connect with bloorview db
-$link = mysqli_connect("localhost", "root", "Singard,.", "bloorview");
+$link = mysqli_connect("localhost", "root", "", "bloorview");
 //error handling
 if (!$link){
   echo "Error: Unable to connect to mySQL".PHP_EQL;

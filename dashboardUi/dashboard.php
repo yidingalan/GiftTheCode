@@ -8,7 +8,40 @@ hardcode: module, quizname, score, `date`, modulePercent
 
 */
 
+$modules = array("Brain Education", "Attention ", "Memory", "Social Skills", "Executive Functioning");
 $module = "Brain Education"; $quizname = "Sample Quiz A"; $score = "4/5"; $date = "2016-10-31"; $modulePercent = "77";
+
+/*
+retrieve quizes for a particular module
+*/
+
+//connect to db
+$link = mysqli_connect("localhost", "root", "", "bloorview");
+if (!$link){
+    echo "Error: Unable to connect to mySQL".PHP_EQL;
+    echo "Debugging errno: " . mysqli_connect_errno().PHP_EQL;
+    echo "Debugging error: " . mysqli_connect_error().PHP_EQL;
+    exit();
+}
+
+//execute query
+$sql = "SELECT * FROM quizscore WHERE module = 'Attention';";
+$result = mysqli_query($link, $sql);
+
+$moduleQuizes = array();
+//output results
+if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) {
+        var_dump($row);
+        $moduleQuizes[] = $row;
+    }
+    var_dump($moduleQuizes);
+} else {
+    echo "0 results";
+}
+
+//exit();
 
 ?>
 
@@ -177,7 +210,7 @@ $module = "Brain Education"; $quizname = "Sample Quiz A"; $score = "4/5"; $date 
 			<div class="panel panel-default">
 				<div class="panel-body easypiechart-panel">
 					<h4>Brain Education</h4>
-					<div class="easypiechart" id="easypiechart-blue" data-percent="0" ><span class="percent"><? $modulePercent."%" ?></span>
+					<div class="easypiechart" id="easypiechart-blue" data-percent="0" ><span class="percent"><? echo $modulePercent."%" ?></span>
 					</div>
 				</div>
 			</div>
