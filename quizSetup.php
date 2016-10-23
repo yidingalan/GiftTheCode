@@ -46,16 +46,17 @@ $data = json_decode($data, true);
       <?php
       //BEGIN loading quiz questions here
                 foreach($data['questions'] as $index => $properties) {
+                    $num = $index + 1;
                     echo '<div class="row">
                         <div class="col-sm-6 col-sm-offset-3 form-box">
                         	<div class="form-top">
 									<div id="first_question">
 										<p style="font-size:20px"class="form_group"> '.$properties['question'].'
 												 </p>
-										<button id="Q1_A" type="submit" onclick="Q1(' . "'Q1_A'" . ');" class="btn">'.$properties['options'][0].'</button>
-										<button id="Q1_B" type="submit" onclick="Q1(' . "'Q1_B'" . ');" class="btn">'.$properties['options'][1].'</button>
-										<button id="Q1_C" type="submit" onclick="Q1(' . "'Q1_C'" . ');" class="btn">'.$properties['options'][2].'</button>
-										<button id="Q1_D" type="submit" onclick="Q1(' . "'Q1_D'" . ');" class="btn">'.$properties['options'][3].'</button>
+										<button id="Q'.$num.'_A" type="submit" onclick="Q'.$num.'(' . "'Q".$num."_A'" . ');" class="btn">'.$properties['options'][0].'</button>
+										<button id="Q'.$num.'_B" type="submit" onclick="Q'.$num.'(' . "'Q".$num."_B'" . ');" class="btn">'.$properties['options'][1].'</button>
+										<button id="Q'.$num.'_C" type="submit" onclick="Q'.$num.'(' . "'Q".$num."_C'" . ');" class="btn">'.$properties['options'][2].'</button>
+										<button id="Q'.$num.'_D" type="submit" onclick="Q'.$num.'(' . "'Q".$num."_D'" . ');" class="btn">'.$properties['options'][3].'</button>
 									</div>	
 							</div>
 						</div>
