@@ -6,6 +6,7 @@
 
 $data = $_POST;
 $json = array("questions" => array());
+$numOfQuiz = 1;
 
 $json['moduleName'] = $data['module'];
 $json['quizName'] = $data['quiz'];
@@ -23,7 +24,8 @@ for($i=1; $i<6; $i++) {
 $json = json_encode($json);
 file_put_contents(str_replace(' ', '', "data/".$data['quiz'].".json"), $json);
 
+$numOfQuiz++;
 //var_dump(json_decode($json));
-header('Location:dashboardUi/dashboard2.php?created=true');
+header('Location:dashboardUi/dashboard2.php?created=true&numOfQuiz='.$numOfQuiz);
 
 ?>

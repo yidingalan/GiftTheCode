@@ -14,6 +14,12 @@ if(isset($_GET['score'])){
 if(isset($_GET['created'])){
     echo "<script> alert('New quiz created!') </script>";
 }
+if(isset($_GET['numOfQuiz'])){
+    $numOfQuiz = $_GET['numOfQuiz'];
+}
+else{
+  $numOfQuiz = 1;
+}
 
 
 $modules = array(
@@ -143,7 +149,7 @@ exit();
 						<svg class="glyph stroked clipboard with paper"><use xlink:href="#stroked-clipboard-with-paper"/></svg>
 					</div>
 					<div class="col-lg-7 widget-right">
-						<div class="large">120</div>
+						<div class="large"> <?php echo $numOfQuiz ?></div>
 						<div class="text-muted">Available Quizzes</div>
 					</div>
 				</div>

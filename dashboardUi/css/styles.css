@@ -96,7 +96,6 @@ h3, h4 {
 }
 
 .dropdown {
-  height: 100%;
   padding: 10px;
   font-size: 16px;
   line-height: 1.33;
@@ -121,7 +120,6 @@ h3, h4 {
   font-weight: lighter;
   line-height: 1.42857143;
   text-align: center;
-  white-space: nowrap;
   vertical-align: middle;
   cursor: pointer;
   -webkit-user-select: none;
@@ -382,7 +380,7 @@ a.bg-danger:hover {
 	margin: 0 -5px;
 }
 
-.panel-footer .input-group-btn:last-child>.btn, 
+.panel-footer .input-group-btn:last-child>.btn,
 .panel-footer .input-group-btn:last-child>.btn-group {
 	margin: 0;
 }
@@ -406,8 +404,8 @@ a.bg-danger:hover {
 .panel-teal .panel-body p,
 .panel-orange .panel-body p,
 .panel-red .panel-body p,
-.panel-green .panel-body p { 
-	color: #fff; 
+.panel-green .panel-body p {
+	color: #fff;
 	color: rgba(255, 255, 255, .8);
 }
 
@@ -423,8 +421,8 @@ a.bg-danger:hover {
 .panel-teal .text-muted,
 .panel-orange .text-muted,
 .panel-red .text-muted,
-.panel-green .text-muted  { 
-	color: rgba(255, 255, 255, .5); 
+.panel-green .text-muted  {
+	color: rgba(255, 255, 255, .5);
 }
 
 .dark-overlay {
@@ -610,7 +608,7 @@ a.bg-danger:hover {
 		margin: 0;
 		padding: 0;
 		overflow-x: hidden;
-		overflow-y: auto; 
+		overflow-y: auto;
 		background-color: #fff;
 		box-shadow: 1px 0px 10px rgba(0, 0, 0, .05);
 	}
@@ -619,7 +617,7 @@ a.bg-danger:hover {
 	}
 }
 
-.sidebar ul.nav a:hover, 
+.sidebar ul.nav a:hover,
 .sidebar ul.nav li.parent ul li a:hover {
 	text-decoration: none;
 	background-color: #e9ecf2;
@@ -798,17 +796,17 @@ h1.page-header {
 
 /*Todo List Widget*/
 
-.todo-list-item .glyphicon { 
-	margin-right:5px; 
-	color: #9fadbb; 
+.todo-list-item .glyphicon {
+	margin-right:5px;
+	color: #9fadbb;
 }
 
-.todo-list-item .glyphicon:hover { 
-	margin-right:5px; 
-	color: #1b3548; 
+.todo-list-item .glyphicon:hover {
+	margin-right:5px;
+	color: #1b3548;
 }
 
-.todo-list { 
+.todo-list {
 	padding: 0;
 	margin: -15px;
 	background: #fff;
@@ -819,14 +817,14 @@ h1.page-header {
 	margin: 0;
 }
 
-.todo-list .checkbox { 
-	display:inline-block; 
+.todo-list .checkbox {
+	display:inline-block;
 	margin: 0px;
 }
 
-.panel-body input[type=checkbox]:checked + label { 
+.panel-body input[type=checkbox]:checked + label {
 	text-decoration: line-through;
-	color: #777; 
+	color: #777;
 }
 
 .todo-list-item {
@@ -991,12 +989,3 @@ h1.page-header {
 	height: 65px;
 	overflow: scroll;
 }
-
-
-
-
-
-
-
-
-
