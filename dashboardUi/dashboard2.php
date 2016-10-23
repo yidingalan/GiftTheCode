@@ -8,6 +8,14 @@ hardcode: module, quizname, score, `date`, modulePercent
 
 */
 
+if(isset($_GET['score'])){
+    echo "<script> alert('Your quiz score was ".$_GET['score']."') </script>";
+}
+if(isset($_GET['created'])){
+    echo "<script> alert('New quiz created!') </script>";
+}
+
+
 $modules = array(
     "Brain Education" => array("colour"=>"blue", "records" => array()),
     "Attention" => array("colour"=>"orange", "records" => array()),
@@ -98,10 +106,21 @@ exit();
             <a href="../input.html">
                 <button class="btn btn-primary btn-lg centroid">Create a Quiz</button>
             </a>
-            <a href="../quizSetup.php">
-				<button class="btn btn-primary btn-lg centroid">Take a Quiz</button>
-				</a>
+
+            <br>
+            <br>
+            <form action="../quizSetup.php" method="post">
+            <select name = "fetch">
+                <?php
+                foreach (glob("../data/*.json") as $file) {
+                    $item = basename($file);
+                    echo "<option value=$item>$item</option>";
+                }
+                ?>
+            </select><br>
+				<button type = "submit" class="btn btn-primary btn-lg centroid">Take a Quiz</button>
 			</div>
+            </form>
 		</div><!--/.row-->
 
 		<!-- Dashboard Widgets -->

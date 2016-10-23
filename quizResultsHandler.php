@@ -1,10 +1,14 @@
 <?php
+
+session_start();
+//print_r($_SESSION); die;
+
 //testing post recieve
-print_r($_POST);
-exit();
+//print_r($_POST);
+//exit();
 
 //Convert it to string and initialize user answer and date
-$_POST . "";
+//$_POST . "";
 $useranswer = "";
 $date = "";
 
@@ -19,20 +23,21 @@ foreach ($_POST as $key => $value){
   }
 }
 
-echo "useranswer: " . $useranswer . "<br>";
-echo "date: " . $date;
+//echo "useranswer: " . $useranswer . "<br>";
+//echo "date: " . $date;
 
 //Now we compare the user answer with the correct answer
 //Then we update the scores and insert it into db
 
 //read the JSON file  -->contains the correct answer
-$file = "quizQuestion.json";
+$file = "data/ABIQuiz.json";
+$file = "data/".$_SESSION['fetch'];
 $json = json_decode(file_get_contents($file), true);
 if($json != NULL){
-  echo "not null";
+  //echo "not null";
 }
 //testing to see if the JSON is actually being loaded
-echo '<pre>' . print_r($json, true) . '</pre>';
+//echo '<pre>' . print_r($json, true) . '</pre>';
 
 $score = 0;
 
@@ -40,7 +45,7 @@ $score = 0;
 $array_answer = str_split($useranswer);
 
 //Calculate the user's score
-foreach ($json as $key => $value){
+foreach ($json['questions'] as $key => $value){
   //user answer: echo $array_answer[$key];
   //correct answer: echo $value['answer'];
   if ($array_answer[$key] == $value['answer']){
@@ -48,7 +53,8 @@ foreach ($json as $key => $value){
   }
 }
 //for debbugging
-echo $score;
+//echo $score;
+$scoreNum = $score;
 $score = $score . "/5";
 
 //connect with bloorview db
@@ -62,7 +68,7 @@ if (!$link){
 }
 
 //if it succeeds  --delete it later
-echo "<br>Success<br>";
+//echo "<br>Success<br>";
 
 //create an hardcoded associative array - will be dynamically updated later
 $quizstatus = array("module"=>"2","quizname"=>"math1");
@@ -72,11 +78,12 @@ $module = $quizstatus["module"];
 $quizname = $quizstatus["quizname"];
 
 //insert into the table
-$sql = "INSERT INTO quizscore(module, quizname, score, date) VALUES('$module', '$quizname', '$score', '$date')";
+$sql = "INSERT INTO quizscore(module, quizname, score, date) VALUES('".$json['moduleName']."', '".$json['quizName']."', '$score', '$date')";
 
 //error handling
 if ($link->query($sql) === TRUE) {
-    echo "inserted successfully";
+    //echo "inserted successfully";
+    header('Location:dashboardUi/dashboard2.php?score='.$scoreNum);
 } else {
     echo "Error: " . $sql . "<br>" . $link->error;
 }

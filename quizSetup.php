@@ -7,7 +7,14 @@ Note: default quiz hardcoded at the moment
 
 */
 
+session_start();
+//quiz to load
 $file = "ABIQuiz.json";
+if(isset($_POST['fetch'])) {
+    $file = $_POST['fetch'];
+}
+$_SESSION["fetch"] = $file;
+//print_r($GLOBALS); die;
 $data = file_get_contents("data/".$file);
 $data = json_decode($data, true);
 //var_dump($data);
@@ -43,6 +50,10 @@ $data = json_decode($data, true);
                         </div>
                     </div>
 
+                    <a href="dashboardUi/dashboard2.php">
+                        <button class="btn btn-primary btn-lg centroid" style="height:50px;width:200px">Back to Dashboard</button>
+                    </a>
+
       <?php
       //BEGIN loading quiz questions here
                 foreach($data['questions'] as $index => $properties) {
@@ -67,7 +78,7 @@ $data = json_decode($data, true);
       ?>
                 </div>
 
-	</div>	
+	</div>
 			<div class="row">
 				<div class="col-sm-6 col-sm-offset-3 form-box">
 					<button style="width:75%" onclick="submit();" class="btn_sign_up" background ="#eee">Submit!</button>

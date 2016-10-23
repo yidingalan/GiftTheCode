@@ -10,7 +10,7 @@
         "Chicken Pox",
         "All of the above"
       ],
-      "answer":"Stroke"
+      "answer":1
     },
     {
       "question":"What is the cause of an Open Head Injury?",
@@ -20,7 +20,7 @@
         "A blunt blow to the head",
         "An infection"
       ],
-      "answer":"An object penetrating the skull"
+      "answer":2
     },
     {
       "question":"What happens during a Coup Contre-Coup",
@@ -30,7 +30,7 @@
         "The brain impacts the front and back of the skull",
         "None of the above"
       ],
-      "answer":"The brain impacts the front and back of the skull"
+      "answer":1
     },
     {
       "question":"What kind of injury causes neurons to stretch and tear?",
@@ -40,7 +40,7 @@
         "Open Head Injury",
         "Stroke"
       ],
-      "answer":"Diffuse Axonal Injury"
+      "answer":2
     },
     {
       "question":"What happens to the brain after an injury?",
@@ -50,7 +50,7 @@
         "Swelling",
         "All of the above"
       ],
-      "answer":"All of the above"
+      "answer":4
     }
   ]
 }

@@ -16,7 +16,7 @@
     </head>
     <body>
 	
-	<form action="read_quiz.php" method="post">
+	<form action="createQuiz.php" method="post">
         <div class="top-content" id="form_container">
                 <div class="container">
                     <div class="row">
@@ -25,7 +25,7 @@
 												<div class="row" >
                         <div class="col-sm-6 col-sm-offset-3 form-box" style="padding-top:15px">
 							<input style="width:100%" type="text" name="module" value="Enter Module Name" onClick="this.select();"/><br><br>
-                            <input style="width:100%" type="text" name="module" value="Enter Quiz Name" onClick="this.select();"/>
+                            <input style="width:100%" type="text" name="quiz" value="Enter Quiz Name" onClick="this.select();"/>
 							</div>
 
 							</div>
@@ -37,7 +37,7 @@
                         	<div class="form-top" >
 									<div class="template">
 									<div>
-										<input style="width:100%" type="text" name="question" value="Enter Your Question Here" onClick="this.select();"/>
+										<input style="width:100%" type="text" name="question1" value="Enter Your Question Here" onClick="this.select();"/>
 									</div>
 										<br/>
 										<div id="answers">
@@ -57,7 +57,7 @@
                         	<div class="form-top" >
 									<div class="template">
 									<div>
-										<input style="width:100%" type="text" name="question" value="Enter Your Question Here" onClick="this.select();"/>
+										<input style="width:100%" type="text" name="question2" value="Enter Your Question Here" onClick="this.select();"/>
 									</div>
 										<br/>
 										<div id="answers">
@@ -66,7 +66,7 @@
 										<input style="width:50%; margin-bottom:5px" type="text" name="Q2_C" value="Multiple Choice Entry C" onClick="this.select();"/>
 										<input style="width:49%; margin-bottom:5px" type="text" name="Q2_D" value="Multiple Choice Entry D" onClick="this.select();"/>
 										</div>
-										<input style="width:100%" type="text" name="solution1" value="Please Enter the Correct Answer" onClick="this.select();"/>
+										<input style="width:100%" type="text" name="solution2" value="Please Enter the Correct Answer" onClick="this.select();"/>
 			
 									</div>	
 							</div>
@@ -77,7 +77,7 @@
                         	<div class="form-top" >
 									<div class="template">
 									<div>
-										<input style="width:100%" type="text" name="question" value="Enter Your Question Here" onClick="this.select();"/>
+										<input style="width:100%" type="text" name="question3" value="Enter Your Question Here" onClick="this.select();"/>
 									</div>
 										<br/>
 										<div id="answers">
@@ -86,7 +86,7 @@
 										<input style="width:50%; margin-bottom:5px" type="text" name="Q3_C" value="Multiple Choice Entry C" onClick="this.select();"/>
 										<input style="width:49%; margin-bottom:5px" type="text" name="Q3_D" value="Multiple Choice Entry D" onClick="this.select();"/>
 										</div>
-										<input style="width:100%" type="text" name="solution1" value="Please Enter the Correct Answer" onClick="this.select();"/>
+										<input style="width:100%" type="text" name="solution3" value="Please Enter the Correct Answer" onClick="this.select();"/>
 			
 									</div>	
 							</div>
@@ -97,7 +97,7 @@
                         	<div class="form-top" >
 									<div class="template">
 									<div>
-										<input style="width:100%" type="text" name="question" value="Enter Your Question Here" onClick="this.select();"/>
+										<input style="width:100%" type="text" name="question4" value="Enter Your Question Here" onClick="this.select();"/>
 									</div>
 										<br/>
 										<div class="answers">
@@ -106,7 +106,7 @@
 										<input style="width:50%; margin-bottom:5px" type="text" name="Q4_C" value="Multiple Choice Entry C" onClick="this.select();"/>
 										<input style="width:49%; margin-bottom:5px" type="text" name="Q4_D" value="Multiple Choice Entry D" onClick="this.select();"/>
 										</div>
-										<input style="width:100%" type="text" name="solution1" value="Please Enter the Correct Answer" onClick="this.select();"/>
+										<input style="width:100%" type="text" name="solution4" value="Please Enter the Correct Answer" onClick="this.select();"/>
 			
 									</div>	
 							</div>
@@ -117,7 +117,7 @@
                         	<div class="form-top" >
 									<div class="template">
 									<div>
-										<input style="width:100%" type="text" name="question" value="Enter Your Question Here" onClick="this.select();"/>
+										<input style="width:100%" type="text" name="question5" value="Enter Your Question Here" onClick="this.select();"/>
 									</div>
 										<br/>
 										<div id="answers">
@@ -126,15 +126,22 @@
 										<input style="width:50%; margin-bottom:5px" type="text" name="Q5_C" value="Multiple Choice Entry C" onClick="this.select();"/>
 										<input style="width:49%; margin-bottom:5px" type="text" name="Q5_D" value="Multiple Choice Entry D" onClick="this.select();"/>
 										</div>
-										<input style="width:100%" type="text" name="solution1" value="Please Enter the Correct Answer" onClick="this.select();"/>
-			
+										<input style="width:100%" type="text" name="solution5" value="Please Enter the Correct Answer" onClick="this.select();"/>
+										<input style="width:100%" type="text" name="solution5" value="Please Enter the Correct Answer" onClick="this.select();"/>
+
 									</div>	
 							</div>
 						</div>
 					</div>
 				</div>
             </div>
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3 form-box">
+                <button type="submit" class="btn">Generate Quiz!</button>
+            </div>
+        </div>
 	</div>
+
 </form>	
 <style type="text/css">
 
@@ -142,7 +149,7 @@
 
 			<div class="row">
 				<div class="col-sm-6 col-sm-offset-3 form-box">
-					<button style="width:75%" onclick="save();" class="btn_sign_up" background ="#eee">Save Quiz</button>
+					<!--<button style="width:75%" onclick="save();" class="btn_sign_up" background ="#eee">Save Quiz</button>-->
 				</div>
 			</div>
 			
