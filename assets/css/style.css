@@ -189,3 +189,6 @@ img { max-width: 100%; }
 
 }
 
+.sign-up-form, .login-form {
+	opacity: 0.90;
+}

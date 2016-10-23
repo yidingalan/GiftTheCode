@@ -6,7 +6,7 @@ var main = function() {
   });
 
 $('.btn-2').click(function() {
-    $('.sign-up-form').hide(1000);
+    $('.sign-up-form').fadeOut(1000);
     $('.login-form').delay(2000).fadeIn(3000);
   });
 
