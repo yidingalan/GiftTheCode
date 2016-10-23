@@ -97,7 +97,7 @@ h3, h4 {
 
 /*Logo Name Color Last Name*/
 .navbar-header .navbar-brand {
-	color: #0097A7;
+	color: #B0BEC5;
 	font-size: 1.2em;
 	text-transform: uppercase;
 	font-weight: 500;
@@ -106,11 +106,11 @@ h3, h4 {
 
 /*Logo Name Color First Name*/
 .navbar-header .navbar-brand span {
-	color: #000;
+	color: #fff;
 }
 
 .navbar-new{
-	background: #E0E0E0;
+	background: #37474F;
 }
 
 /*Buttons*/
