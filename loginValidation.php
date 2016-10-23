@@ -22,7 +22,7 @@ if($found != true){
     header('Location:index.php?login=false');
 }
 else{
-    header('Location:dashboardUi/dashboard.php');
+    header('Location:dashboardUi/dashboard2.php');
 }
 
 
