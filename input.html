@@ -14,48 +14,65 @@
 		<link rel="stylesheet" href="assets/css/form-elements-quiz.css">
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
-
     <body>
+	
+	<form action="read_quiz.php" method="post">
         <div class="top-content" id="form_container">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2 text">
                             <h1><strong>New Quiz!</strong> <br/></h1>
-							<h2 style="color:white">Module 1</h2>
+												<div class="row" >
+                        <div class="col-sm-6 col-sm-offset-3 form-box" style="padding-top:15px">
+							<input style="width:100%" type="text" name="module" value="Enter Module Name" onClick="this.select();"/>
+							</div>
+							</div>
                         </div>
                     </div>
-					<div class="row">
-                        <div class="col-sm-6 col-sm-offset-3 form-box">
-                        	<div class="form-top">
-									<div id="first_question">
-										<p style="font-size:20px"class="form_group"> Which of the following is an acquired brain injury (ABI)?
-												(In future need to add php or javascript to pull from data in server) </p>
-										<button id="Q1_A" type="submit" onclick="Q1('Q1_A');" class="btn">Strokedsgsdfsdfsdfsdfsdfsd</button>
-										<button id="Q1_B" type="submit" onclick="Q1('Q1_B');" class="btn">Bgoken Leg</button>
-										<button id="Q1_C" type="submit" onclick="Q1('Q1_C');" class="btn">Chidsfsdfsdfdsfsdfsdfdsfsdcken Pox</button>
-										<button id="Q1_D" type="submit" onclick="Q1('Q1_D');" class="btn">Alsdfsdfdsfsdffsfsdfdsfdl</button>
+					
+					<div class="row" >
+                        <div class="col-sm-6 col-sm-offset-3 form-box" style="padding-top:15px">
+                        	<div class="form-top" >
+									<div id="template">
+									<div>
+										<input style="width:100%" type="text" name="question" value="Enter Your Question Here" onClick="this.select();"/>
+									</div>
+										<br/>
+										<div id="answers">
+										<input style="width:50%" type="text" name="Q1_A" value="Multiple Choice Entry A" onClick="this.select();"/>
+										<input style="width:49%" type="text" name="Q1_B" value="Multiple Choice Entry B" onClick="this.select();"/>
+										<input style="width:50%" type="text" name="Q1_C" value="Multiple Choice Entry C" onClick="this.select();"/>
+										<input style="width:49%" type="text" name="Q1_D" value="Multiple Choice Entry D" onClick="this.select();"/>
+										</div>
+										<input style="width:100%" type="text" name="solution1" value="Please Enter the Correct Answer" onClick="this.select();"/>
+			
 									</div>	
 							</div>
 						</div>
 					</div>
+					
 				</div>
             </div>
-        
-	</div>	
+	</div>
+</form>	
+<style type="text/css">
+
+</style>
+
 			<div class="row">
 				<div class="col-sm-6 col-sm-offset-3 form-box">
-					<button style="width:75%" onclick="submit();" class="btn_sign_up" background ="#eee">Submit!</button>
+					<button style="width:75%" onclick="save();" class="btn_sign_up" background ="#eee">Save Quiz</button>
 				</div>
 			</div>
 			
 			<br/>
 			<br/>			
 
-        <!-- Javascript -->
+        <!-- Javascript -- /*can we make save simply redirct to main page -->
         <script src="assets/js/jquery-1.11.1.min.js"></script>
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
         <script src="assets/js/jquery.backstretch.min.js"></script>
         <script src="assets/js/scripts.js"></script>
-		<script src="assets/js/buttons.js"></script>
+		<script src="assets/js/input.js"></script>
     </body>
 </html>
