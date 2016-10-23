@@ -3,10 +3,29 @@
 print_r($_POST);
 exit();
 
-/*
- INSERTING QUIZ RESULTS INTO DB
-*/
-//read the JSON file
+//Convert it to string and initialize user answer and date
+$_POST . "";
+$useranswer = "";
+$date = "";
+
+foreach ($_POST as $key => $value){
+  $value . "";
+  if (strpos($key, 'Question') !== false){
+    $useranswer = $useranswer . $value;
+
+  }
+  if (strpos($key, 'datestring') !== false){
+    $date = $date . $value;
+  }
+}
+
+echo "useranswer: " . $useranswer . "<br>";
+echo "date: " . $date;
+
+//Now we compare the user answer with the correct answer
+//Then we update the scores and insert it into db
+
+//read the JSON file  -->contains the correct answer
 $file = "quizQuestion.json";
 $json = json_decode(file_get_contents($file), true);
 if($json != NULL){
@@ -15,13 +34,10 @@ if($json != NULL){
 //testing to see if the JSON is actually being loaded
 echo '<pre>' . print_r($json, true) . '</pre>';
 
-//testing: echo $json[1]['question'];
-
 $score = 0;
-//Hardcode an answer and convert it to an array
-//todo: dynamically get the data from front end
-$answer = "33221";
-$array_answer = str_split($answer);
+
+//Convert the user answer from string to array
+$array_answer = str_split($useranswer);
 
 //Calculate the user's score
 foreach ($json as $key => $value){
@@ -31,7 +47,9 @@ foreach ($json as $key => $value){
     $score++;
   }
 }
+//for debbugging
 echo $score;
+$score = $score . "/5";
 
 //connect with bloorview db
 $link = mysqli_connect("localhost", "root", "", "bloorview");
@@ -47,15 +65,11 @@ if (!$link){
 echo "<br>Success<br>";
 
 //create an hardcoded associative array - will be dynamically updated later
-$quizstatus = array("module"=>"2","quizname"=>"math1","date"=>"2016-10-22");
+$quizstatus = array("module"=>"2","quizname"=>"math1");
 
 //Parse the data
 $module = $quizstatus["module"];
 $quizname = $quizstatus["quizname"];
-//$score = $quizstatus["score"];
-$date = $quizstatus["date"];
-
-//$date1 = date('Y-m-d', strtotime(str_replace('-', '/', $date)));
 
 //insert into the table
 $sql = "INSERT INTO quizscore(module, quizname, score, date) VALUES('$module', '$quizname', '$score', '$date')";
@@ -66,4 +80,5 @@ if ($link->query($sql) === TRUE) {
 } else {
     echo "Error: " . $sql . "<br>" . $link->error;
 }
+exit();
 ?>

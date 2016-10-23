@@ -3,35 +3,35 @@ function Q1(text){
 	document.getElementById("Q1_B").style.background = "#4aaf51";
 	document.getElementById("Q1_C").style.background = "#4aaf51";
 	document.getElementById("Q1_D").style.background = "#4aaf51";
-	document.getElementById(text).style.background = "blue";		
+	document.getElementById(text).style.background = "blue";
 }
 function Q2(text){
 	document.getElementById("Q2_A").style.background = "#4aaf51";
 	document.getElementById("Q2_B").style.background = "#4aaf51";
 	document.getElementById("Q2_C").style.background = "#4aaf51";
 	document.getElementById("Q2_D").style.background = "#4aaf51";
-	document.getElementById(text).style.background = "red";	
+	document.getElementById(text).style.background = "red";
 }
 function Q3(text){
 	document.getElementById("Q3_A").style.background = "#4aaf51";
 	document.getElementById("Q3_B").style.background = "#4aaf51";
 	document.getElementById("Q3_C").style.background = "#4aaf51";
 	document.getElementById("Q3_D").style.background = "#4aaf51";
-	document.getElementById(text).style.background = "yellow";		
+	document.getElementById(text).style.background = "yellow";
 }
 function Q4(text){
 	document.getElementById("Q4_A").style.background = "#4aaf51";
 	document.getElementById("Q4_B").style.background = "#4aaf51";
 	document.getElementById("Q4_C").style.background = "#4aaf51";
 	document.getElementById("Q4_D").style.background = "#4aaf51";
-	document.getElementById(text).style.background = "purple";		
+	document.getElementById(text).style.background = "purple";
 }
 function Q5(text){
 	document.getElementById("Q5_A").style.background = "#4aaf51";
 	document.getElementById("Q5_B").style.background = "#4aaf51";
 	document.getElementById("Q5_C").style.background = "#4aaf51";
 	document.getElementById("Q5_D").style.background = "#4aaf51";
-	document.getElementById(text).style.background = "cyan";	
+	document.getElementById(text).style.background = "cyan";
 }
 function submit(){
 	var Q1 = 0;
@@ -39,7 +39,7 @@ function submit(){
 	var Q3 = 0;
 	var Q4 = 0;
 	var Q5 = 0;
-	
+
 	if(document.getElementById("Q1_A").style.background == "blue"){
 		Q1 = 1;
 	}
@@ -47,12 +47,12 @@ function submit(){
 		Q1 = 2;
 	}
 	else if(document.getElementById("Q1_C").style.background == "blue"){
-		Q1 = 3;	
+		Q1 = 3;
 	}
 	else if(document.getElementById("Q1_D").style.background == "blue"){
 		Q1 = 4;
 	}
-	
+
 	if(document.getElementById("Q2_A").style.background == "red"){
 		Q2 = 1;
 	}
@@ -60,7 +60,7 @@ function submit(){
 		Q2 = 2;
 	}
 	else if(document.getElementById("Q2_C").style.background == "red"){
-		Q2 = 3;	
+		Q2 = 3;
 	}
 	else if(document.getElementById("Q2_D").style.background == "red"){
 		Q2 = 4;
@@ -72,12 +72,12 @@ function submit(){
 		Q3 = 2;
 	}
 	else if(document.getElementById("Q3_C").style.background == "yellow"){
-		Q3 = 3;	
+		Q3 = 3;
 	}
 	else if(document.getElementById("Q3_D").style.background == "yellow"){
 		Q3 = 4;
 	}
-	
+
 	if(document.getElementById("Q4_A").style.background == "purple"){
 		Q4 = 1;
 	}
@@ -85,12 +85,12 @@ function submit(){
 		Q4 = 2;
 	}
 	else if(document.getElementById("Q4_C").style.background == "purple"){
-		Q4 = 3;	
+		Q4 = 3;
 	}
 	else if(document.getElementById("Q4_D").style.background == "purple"){
 		Q4 = 4;
 	}
-	
+
 	if(document.getElementById("Q5_A").style.background == "cyan"){
 		Q5 = 1;
 	}
@@ -98,17 +98,17 @@ function submit(){
 		Q5 = 2;
 	}
 	else if(document.getElementById("Q5_C").style.background == "cyan"){
-		Q5 = 3;	
+		Q5 = 3;
 	}
 	else if(document.getElementById("Q5_D").style.background == "cyan"){
 		Q5 = 4;
 	}
-	
+
 	var d = new Date();
 	var datestring = ("0" + d.getDate()).slice(-2) + "-" + ("0"+(d.getMonth()+1)).slice(-2) + "-" +
 		d.getFullYear() + " " + ("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2) + ":" + ("0" + d.getSeconds()).slice(-2);
 
-//store date, score, quiz, module, id 
+//store date, score, quiz, module, id
 	theForm = document.createElement('form');
 	theForm.action = 'quizResultsHandler.php';
 	theForm.method = 'post';
@@ -142,8 +142,10 @@ function submit(){
 	theForm.appendChild(newInput4);
 	theForm.appendChild(newInput5);
 	theForm.appendChild(newInput6);
-	window.alert(datestring);
+
 	document.getElementById('form_container').appendChild(theForm);
 	theForm.submit();
-	
+
+
+
 	}
