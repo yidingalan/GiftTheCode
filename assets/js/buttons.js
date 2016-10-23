@@ -142,7 +142,7 @@ function submit(){
 	theForm.appendChild(newInput4);
 	theForm.appendChild(newInput5);
 	theForm.appendChild(newInput6);
-	 
+	window.alert(datestring);
 	document.getElementById('form_container').appendChild(theForm);
 	theForm.submit();
 	
