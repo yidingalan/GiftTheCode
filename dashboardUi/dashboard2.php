@@ -191,15 +191,6 @@ exit();
 
 
         <div class="row">
-		<div class="col-xs-6 col-md-3">
-			<div class="panel panel-default">
-				<div class="panel-body easypiechart-panel">
-					<h4>Executive Functioning</h4>
-					<div class="easypiechart" id="easypiechart-green" data-percent="3" ><span class="percent">27%</span>
-					</div>
-				</div>
-			</div>
-		</div>
 </div>
 
 <script src="js/jquery-1.11.1.min.js"></script>
