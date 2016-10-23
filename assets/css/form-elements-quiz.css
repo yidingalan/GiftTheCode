@@ -48,14 +48,14 @@ textarea::-webkit-input-placeholder, textarea.form-control::-webkit-input-placeh
 
 button.btn {
 	height: 50px;
-/*	width: 123px;*/
+	width: 100%;
     margin-top: 5px;
     padding: 0 20px;
     vertical-align: middle;
     background: #4aaf51;
     border: 0;
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 300;
     line-height: 50px;
     color: #fff;
@@ -82,7 +82,7 @@ button.btn_sign_up {
     background: #ff3838;
     border: 0;
     font-family: 'Roboto', sans-serif;
-    font-size: 16px;
+    font-size: 27px;
     font-weight: 300;
     line-height: 50px;
     color: #fff;
