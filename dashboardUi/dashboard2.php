@@ -95,8 +95,11 @@ exit();
 				<h1 class="page-header">Dashboard</h1>
 			</div>
 			<div class="col-lg-6 button-wrapper"" align="right">
-			<a href="../quiz.html">
-				<button class="btn btn-primary btn-lg centroid">Begin Quiz</button>
+            <a href="../input.html">
+                <button class="btn btn-primary btn-lg centroid">Create a Quiz</button>
+            </a>
+            <a href="../quizSetup.php">
+				<button class="btn btn-primary btn-lg centroid">Take a Quiz</button>
 				</a>
 			</div>
 		</div><!--/.row-->

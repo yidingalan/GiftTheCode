@@ -1,6 +1,7 @@
 <?php
 //testing post recieve
 print_r($_POST);
+exit();
 
 /*
  INSERTING QUIZ RESULTS INTO DB

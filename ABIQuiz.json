@@ -1,0 +1,56 @@
+{
+  "quizName":"ABIQuiz",
+  "moduleName":"Brain Education",
+  "questions":[
+    {
+      "question":"Which of the following is an acquired brain injury (ABI)?",
+      "options":[
+        "Stroke",
+        "Broken Leg",
+        "Chicken Pox",
+        "All of the above"
+      ],
+      "answer":"Stroke"
+    },
+    {
+      "question":"What is the cause of an Open Head Injury?",
+      "options":[
+        "Lack of oxygen in the brain",
+        "An object penetrating the skull",
+        "A blunt blow to the head",
+        "An infection"
+      ],
+      "answer":"An object penetrating the skull"
+    },
+    {
+      "question":"What happens during a Coup Contre-Coup",
+      "options":[
+        "The brain undergoes a lot of rotational forces",
+        "A foreign object penetrates the skull",
+        "The brain impacts the front and back of the skull",
+        "None of the above"
+      ],
+      "answer":"The brain impacts the front and back of the skull"
+    },
+    {
+      "question":"What kind of injury causes neurons to stretch and tear?",
+      "options":[
+        "Coup Contre-Coup",
+        "Diffuse Axonal Injury",
+        "Open Head Injury",
+        "Stroke"
+      ],
+      "answer":"Diffuse Axonal Injury"
+    },
+    {
+      "question":"What happens to the brain after an injury?",
+      "options":[
+        "Bruising",
+        "Bleeding",
+        "Swelling",
+        "All of the above"
+      ],
+      "answer":"All of the above"
+    }
+  ]
+}
