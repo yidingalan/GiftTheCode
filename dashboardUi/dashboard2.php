@@ -136,7 +136,7 @@ exit();
 						<svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg>
 					</div>
 					<div class="col-lg-9 widget-right">
-						<div class="large">Firstname Lastname</div>
+						<div class="large">Jackson Guo</div>
 						<div class="text-muted">Patient</div>
 					</div>
 				</div>
@@ -162,7 +162,7 @@ exit();
 						<svg class="glyph stroked checkmark"><use xlink:href="#stroked-checkmark"/></use></svg>
 					</div>
 					<div class="col-lg-7 widget-right">
-						<div class="large">52</div>
+						<div class="large">0</div>
 						<div class="text-muted">Complete Quizzes</div>
 					</div>
 				</div>
