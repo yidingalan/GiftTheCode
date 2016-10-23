@@ -104,16 +104,6 @@ exit();
 			</div>
 			<div class="col-lg-6 button-wrapper" align="right">
 				<form action="../quizSetup.php" method="post">
-					<select name = "fetch" class="dropdown" align="left">
-					<?php
-						foreach (glob("../data/*.json") as $file) {
-						$item = basename($file);
-						echo "<option value=$item>$item</option>";
-						}
-					?>
-				</select>
-				<button type = "submit" class="btn-primary btn-new centroid">Take a Quiz</button>
-			</form>
 			<a href="../input.html">
 				<button class="btn-primary btn-new centroid">Create a Quiz</button>
 			</a>
