@@ -97,16 +97,17 @@ h3, h4 {
 
 /*Logo Name Color Last Name*/
 .navbar-header .navbar-brand {
-	color: #B0BEC5;
+	color: #fff;
 	font-size: 1.2em;
 	text-transform: uppercase;
-	font-weight: 500;
+	font-weight: 800;
 	letter-spacing: 2px;
 }
 
 /*Logo Name Color First Name*/
 .navbar-header .navbar-brand span {
-	color: #fff;
+	color: #B0BEC5;
+	font-weight: 100;
 }
 
 .navbar-new{
