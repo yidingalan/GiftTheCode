@@ -179,7 +179,7 @@ exit();
 			<div class="panel panel-default">
 				<div class="panel-body easypiechart-panel">
 					<h4>'.$moduleName.'</h4>
-					<div class="easypiechart" id="easypiechart-'.$properties['colour'].'" data-percent="1" ><span class="percent">65%</span>
+					<div class="easypiechart" id="easypiechart-'.$properties['colour'].'" data-percent="30" ><span class="percent">30%</span>
 					</div>
 				</div>
 			</div>
