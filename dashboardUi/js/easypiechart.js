@@ -2,7 +2,7 @@
  * easyPieChart
  * Lightweight plugin to render simple, animated and retina optimized pie charts
  *
- * @license 
+ * @license
  * @author Robert Fleischmann <rendro87@gmail.com> (http://robert-fleischmann.de)
  * @version 2.1.5
  **/
@@ -134,7 +134,7 @@ var CanvasRenderer = function(el, options) {
   this.getCanvas = function() {
     return canvas;
   };
-  
+
   /**
     * Canvas 2D context 'ctx' accessor
    */
@@ -352,7 +352,7 @@ $.fn.easyPieChart = function(options) {
 
 		if (!$.data(this, 'easyPieChart')) {
 			instanceOptions = $.extend({}, options, $(this).data());
-			pieChart = new EasyPieChart(this, instanceOptions);	
+			pieChart = new EasyPieChart(this, instanceOptions);
 			$.data(this, 'easyPieChart', pieChart);
 			// httpUpdatePercentage(url, handleData, instanceOptions.percent, pieChart);
 		}
@@ -365,11 +365,11 @@ $.fn.easyPieChart = function(options) {
 function httpUpdatePercentage(theUrl, callback, percentComplete, pieChart)
 {
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.onreadystatechange = function() { 
+    xmlHttp.onreadystatechange = function() {
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
             return callback(xmlHttp.responseText, percentComplete, pieChart);
     }
-    xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+    xmlHttp.open("GET", theUrl, true); // true for asynchronous
     xmlHttp.send(null);
 }
 
@@ -377,7 +377,6 @@ function httpUpdatePercentage(theUrl, callback, percentComplete, pieChart)
 function handleData( data, percentComplete, pieChart) {
     // do whatever
     var jsonData = JSON.parse(data);
-	document.getElementsByClassName("easypiechart")[percentComplete]
-	.getElementsByClassName("percent")[0].innerHTML=Math.floor(jsonData.parse_time_nanoseconds/1000) + "%";
+	   document.getElementsByClassName("easypiechart")[percentComplete].getElementsByClassName("percent")[0].innerHTML=Math.floor(jsonData.parse_time_nanoseconds/1000) + "%";
     pieChart.update(jsonData.parse_time_nanoseconds/1000);
-} 
+}

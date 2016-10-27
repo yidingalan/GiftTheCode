@@ -18,7 +18,7 @@ if(isset($_GET['numOfQuiz'])){
     $numOfQuiz = $_GET['numOfQuiz'];
 }
 else{
-  $numOfQuiz = 1;
+  $numOfQuiz = 8;
 }
 
 
@@ -136,7 +136,7 @@ exit();
 						<svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg>
 					</div>
 					<div class="col-lg-9 widget-right">
-						<div class="large">Jackson Guo</div>
+						<div class="large">ID80291</div>
 						<div class="text-muted">Patient</div>
 					</div>
 				</div>
@@ -179,7 +179,7 @@ exit();
 			<div class="panel panel-default">
 				<div class="panel-body easypiechart-panel">
 					<h4>'.$moduleName.'</h4>
-					<div class="easypiechart" id="easypiechart-'.$properties['colour'].'" data-percent="30" ><span class="percent">30%</span>
+					<div class="easypiechart" id="easypiechart-'.$properties['colour'].'" data-percent="18" ><span class="percent">18%</span>
 					</div>
 				</div>
 			</div>
